@@ -9,7 +9,7 @@ import { InputEvent } from './ngx-ipv4-helper.interface';
  * The maximum value in each octet is 255
  */
 @Directive({
-  selector: '[ngxNgxIpv4Helper]'
+  selector: '[ngxIpv4Helper]'
 })
 export class NgxIpv4HelperDirective {
   /** old value, set on keydown */
