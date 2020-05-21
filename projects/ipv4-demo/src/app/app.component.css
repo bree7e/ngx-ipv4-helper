@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  width: 500px;
+}
+
+button {
+  margin-bottom: 16px;
+}
+
+input {
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
+}

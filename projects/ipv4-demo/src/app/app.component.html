@@ -1,0 +1,18 @@
+<h1>{{ title }}</h1>
+
+<h3>Template form</h3>
+<div class="wrapper">
+  <input ngxSuffix=".example.com" value="domain" />
+</div>
+
+<pre>
+  <code [highlight]="block1"></code>
+</pre>
+
+<h3>Reactive form</h3>
+<div class="wrapper">
+  <input ngxSuffix=".angular.com" [(ngModel)]="domain" />
+</div>
+<pre>
+  <code [highlight]="block2"></code>
+</pre>

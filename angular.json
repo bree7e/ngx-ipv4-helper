@@ -37,6 +37,124 @@
           }
         }
       }
+    },
+    "ipv4-demo": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/ipv4-demo",
+      "sourceRoot": "projects/ipv4-demo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ipv4-demo",
+            "index": "projects/ipv4-demo/src/index.html",
+            "main": "projects/ipv4-demo/src/main.ts",
+            "polyfills": "projects/ipv4-demo/src/polyfills.ts",
+            "tsConfig": "projects/ipv4-demo/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/ipv4-demo/src/favicon.ico",
+              "projects/ipv4-demo/src/assets"
+            ],
+            "styles": [
+              "projects/ipv4-demo/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ipv4-demo/src/environments/environment.ts",
+                  "with": "projects/ipv4-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ipv4-demo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ipv4-demo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ipv4-demo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ipv4-demo/src/test.ts",
+            "polyfills": "projects/ipv4-demo/src/polyfills.ts",
+            "tsConfig": "projects/ipv4-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/ipv4-demo/karma.conf.js",
+            "assets": [
+              "projects/ipv4-demo/src/favicon.ico",
+              "projects/ipv4-demo/src/assets"
+            ],
+            "styles": [
+              "projects/ipv4-demo/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ipv4-demo/tsconfig.app.json",
+              "projects/ipv4-demo/tsconfig.spec.json",
+              "projects/ipv4-demo/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ipv4-demo/e2e/protractor.conf.js",
+            "devServerTarget": "ipv4-demo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ipv4-demo:serve:production"
+            }
+          }
+        }
+      }
     }},
   "defaultProject": "ngx-ipv4-helper"
 }
