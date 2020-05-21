@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ipv4-demo';
-  block1 = `
-  <div ngxSuffixWrapper *ngIf="show">
-    <input ngxSuffix=".example.com" value="domain" />
-  </div>
-  `;
-  block2 = `
-  <div ngxSuffixWrapper *ngIf="show">
-    <input ngxSuffix=".angular.com" [(ngModel)]="domain" />
-  </div>
-  `;
+  ip = new FormControl('');
+  block1 = `<input ngModel ngxIpv4Helper />`;
+  block2 = `<input [formControl]="ip" ngxIpv4Helper />`;
 }

@@ -5,6 +5,7 @@ import { HighlightPlusModule } from 'ngx-highlightjs/plus';
 
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxIpv4HelperModule } from 'projects/ngx-ipv4-helper/src/public-api';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     HighlightPlusModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxIpv4HelperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
