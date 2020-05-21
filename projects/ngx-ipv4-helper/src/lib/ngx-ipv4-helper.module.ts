@@ -1,13 +1,9 @@
-import { NgModule } from '@angular/core';
-import { NgxIpv4HelperComponent } from './ngx-ipv4-helper.component';
-import { NgxIpv4HelperDirective } from './ngx-ipv4-helper.directive';
-
-
+import { NgModule } from "@angular/core";
+import { NgxIpv4HelperDirective } from "./ngx-ipv4-helper.directive";
 
 @NgModule({
-  declarations: [NgxIpv4HelperComponent, NgxIpv4HelperDirective],
-  imports: [
-  ],
-  exports: [NgxIpv4HelperComponent]
+  declarations: [NgxIpv4HelperDirective],
+  imports: [],
+  exports: [NgxIpv4HelperDirective],
 })
-export class NgxIpv4HelperModule { }
+export class NgxIpv4HelperModule {}

@@ -15,7 +15,12 @@
             "tsConfig": "projects/ngx-ipv4-helper/tsconfig.lib.json",
             "project": "projects/ngx-ipv4-helper/ng-package.json"
           }
-        },
+        ,          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-ipv4-helper/tsconfig.lib.prod.json"
+            }
+          }
+},
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -53,7 +58,7 @@
             "main": "projects/ipv4-demo/src/main.ts",
             "polyfills": "projects/ipv4-demo/src/polyfills.ts",
             "tsConfig": "projects/ipv4-demo/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/ipv4-demo/src/favicon.ico",
               "projects/ipv4-demo/src/assets"
@@ -76,7 +81,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
