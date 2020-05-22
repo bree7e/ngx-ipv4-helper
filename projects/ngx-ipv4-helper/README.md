@@ -1,24 +1,59 @@
 # NgxIpv4Helper
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+# ngx-ipv4-helper
 
-## Code scaffolding
+## Demo
 
-Run `ng generate component component-name --project ngx-ipv4-helper` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-ipv4-helper`.
-> Note: Don't forget to add `--project ngx-ipv4-helper` or else it will be added to the default project in your `angular.json` file. 
+![ngx-ipv4-helper demo]()
 
-## Build
+[Demo application](https://bree7e.github.io/ngx-ipv4-helper/)
 
-Run `ng build ngx-ipv4-helper` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Publishing
+To install this library, run:
 
-After building your library with `ng build ngx-ipv4-helper`, go to the dist folder `cd dist/ngx-ipv4-helper` and run `npm publish`.
+```bash
+$ npm install ngx-ipv4-helper --save
+```
 
-## Running unit tests
+and then import module:
 
-Run `ng test ngx-ipv4-helper` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-## Further help
+import { AppComponent } from "./app.component";
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+import { NgxIpv4HelperModule } from "ngx-ipv4-helper"; // <===
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    NgxIpv4HelperModule, // <===
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
+
+## Usage
+
+`ngxIpv4Helper` should place on input with `ngControl`
+
+Template form
+
+```html
+<input ngModel ngxIpv4Helper />
+```
+
+Reactive form
+
+```html
+<input [formControl]="ip" ngxIpv4Helper />
+```
+
+```ts
+ip = new FormControl("");
+```

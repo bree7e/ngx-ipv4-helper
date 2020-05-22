@@ -158,11 +158,18 @@
               "devServerTarget": "ipv4-demo:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://bree7e.github.io/ngx-ipv4-helper/",
+            "name": "Ngx ipv4 helper Demo"
+          }
         }
       }
     }
   },
-  "defaultProject": "ngx-ipv4-helper",
+  "defaultProject": "ipv4-demo",
   "cli": {
     "analytics": false
   }

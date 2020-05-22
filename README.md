@@ -1,27 +1,67 @@
 # NgxIpv4Helper
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+# ngx-ipv4-helper
 
-## Development server
+## Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![ngx-ipv4-helper demo]()
 
-## Code scaffolding
+[Demo application](https://bree7e.github.io/ngx-ipv4-helper/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
+
+To install this library, run:
+
+```bash
+$ npm install ngx-ipv4-helper --save
+```
+
+and then import module:
+
+```typescript
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+
+import { AppComponent } from "./app.component";
+
+import { NgxIpv4HelperModule } from "ngx-ipv4-helper"; // <===
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    NgxIpv4HelperModule, // <===
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
+
+## Usage
+
+`ngxIpv4Helper` should place on input with `ngControl`
+
+Template form
+
+```html
+<input ngModel ngxIpv4Helper />
+```
+
+Reactive form
+
+```html
+<input [formControl]="ip" ngxIpv4Helper />
+```
+
+```ts
+ip = new FormControl("");
+```
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build ngx-ipv4-helper` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Publishing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+After building your library with `ng build ngx-ipv4-helper`, go to the dist folder `cd dist/ngx-ipv4-helper` and run `npm publish`.

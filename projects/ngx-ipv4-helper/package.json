@@ -1,8 +1,17 @@
 {
   "name": "ngx-ipv4-helper",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "homepage": "https://github.com/bree7e/ngx-ipv4-helper",
+  "author": {
+    "name": "Alexandr Vetrov",
+    "url": "https://tyapk.ru"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/bree7e/ngx-ipv4-helper.git"
+  },
   "peerDependencies": {
-    "@angular/common": "^8.2.0",
-    "@angular/core": "^8.2.0"
+    "@angular/common": "^9.0.0",
+    "@angular/core": "^9.0.0"
   }
 }
