@@ -6,9 +6,17 @@
     "name": "Alexandr Vetrov",
     "url": "https://tyapk.ru"
   },
+  "keywords": [
+    "angular",
+    "angular2",
+    "typescript",
+    "ipv4",
+    "ipv4-address",
+    "input"
+  ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/bree7e/ngx-ipv4-helper.git"
+    "type": "git",
+    "url": "https://github.com/bree7e/ngx-ipv4-helper.git"
   },
   "peerDependencies": {
     "@angular/common": "^9.0.0",
