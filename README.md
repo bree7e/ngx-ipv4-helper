@@ -1,10 +1,6 @@
-# NgxIpv4Helper
-
 # ngx-ipv4-helper
 
-## Demo
-
-![ngx-ipv4-helper demo]()
+An angular directive to help input ipv4 address
 
 [Demo application](https://bree7e.github.io/ngx-ipv4-helper/)
 
@@ -60,7 +56,7 @@ ip = new FormControl("");
 
 ## Build
 
-Run `ng build ngx-ipv4-helper` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build ngx-ipv4-helper --prod` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Publishing
 

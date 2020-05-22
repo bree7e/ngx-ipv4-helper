@@ -1,10 +1,6 @@
-# NgxIpv4Helper
-
 # ngx-ipv4-helper
 
-## Demo
-
-![ngx-ipv4-helper demo]()
+An angular directive to help input ipv4 address
 
 [Demo application](https://bree7e.github.io/ngx-ipv4-helper/)
 
